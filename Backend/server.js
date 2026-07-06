@@ -5,7 +5,7 @@ import { YSocketIO } from "y-socket.io/dist/server"
 
 
 const app = express()
-app.use(express.static("public"))
+app.use(express.static("public")); // serve static files, frontend build starts running on backend 3000 ports as well
 
 
 const httpServer = createServer(app)
