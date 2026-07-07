@@ -1,5 +1,6 @@
 # Build the Frontend [dist folder]
 # Copy the dist folder content in Backend/public folder
+# FROM node:20-alpine as frontend-builder - This line is used to build the image named frontend-builder
 
 FROM node:20-alpine as frontend-builder
 
@@ -12,7 +13,7 @@ RUN npm install
 RUN npm run build
 
 # Build the Backend
-FROM node:20-alpine
+FROM node:20-alpine  
 
 COPY ./Backend /app
 
